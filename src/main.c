@@ -9,14 +9,13 @@ int main()
     srand(time(NULL));
     // Generate random number between 1 and 100
     int randomNum = rand() % 101;
-
     printf("Welcome! Please guess a number between 1 and 100\n");
 
     do
     {
         printf("\nEnter your guess: \n");
         scanf("%d", &numGuess);
-        attempts++; // Increments the attmpts by 1
+        attempts++; // Increments the attempts by 1
 
         // When the user guess is the correct number
         if (numGuess == randomNum)
@@ -24,7 +23,6 @@ int main()
             printf("Congratulations! You Win!\n");
             return 0;
         }
-
         // When the user guess is higher the correct number
         else if (numGuess > randomNum)
         {
