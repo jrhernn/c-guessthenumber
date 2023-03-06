@@ -27,5 +27,6 @@ int main()
         {
             printf("Too Low!\n");
         }
-    }
+    } while (attempts < 10);
+    printf("You Lose! All 10 attempts used\n");
 }
