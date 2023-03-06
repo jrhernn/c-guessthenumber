@@ -8,9 +8,9 @@ int main()
     srand(time(NULL));
     int randomNum = rand() % 101;
 
-    printf("Welcome! Please guess a number between 1 and 100\n")
+    printf("Welcome! Please guess a number between 1 and 100\n");
 
-        do
+    do
     {
         printf("\nEnter your guess: \n");
         scanf("%d", &numGuess);
@@ -29,8 +29,6 @@ int main()
         {
             printf("Too Low!\n");
         }
-    }
-    while (attempts < 10)
-        ;
+    } while (attempts < 10);
     printf("You Lose! All 10 attempts used\n");
 }
