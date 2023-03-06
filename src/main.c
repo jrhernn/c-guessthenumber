@@ -5,7 +5,9 @@
 int main()
 {
     int numGuess, attempts = 0;
+    // Seed random number generator
     srand(time(NULL));
+    // Generate random number between 1 and 100
     int randomNum = rand() % 101;
 
     printf("Welcome! Please guess a number between 1 and 100\n");
@@ -14,21 +16,25 @@ int main()
     {
         printf("\nEnter your guess: \n");
         scanf("%d", &numGuess);
-        attempts++;
+        attempts++; // Increments the attmpts by 1
 
+        // When the user guess is the correct number
         if (numGuess == randomNum)
         {
             printf("Congratulations! You Win!\n");
             return 0;
         }
+
+        // When the user guess is higher the correct number
         else if (numGuess > randomNum)
         {
             printf("Too High!\n");
         }
-        else
+        else // When the usesr guess is too low
         {
             printf("Too Low!\n");
         }
+        // While loop that quits after the 10th attempt
     } while (attempts < 10);
     printf("You Lose! All 10 attempts used\n");
 }
